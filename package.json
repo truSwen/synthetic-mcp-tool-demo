@@ -1,0 +1,10 @@
+{
+  "name": "synthetic-mcp-tool-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A real MCP stdio connection with deterministic tools over fictional business data.",
+  "engines": { "node": ">=22" },
+  "scripts": { "start": "node server.js", "demo": "node client.js", "test": "node --test test/*.test.js", "web": "node web.js" },
+  "dependencies": { "@modelcontextprotocol/server": "2.3.1", "@modelcontextprotocol/client": "2.3.1", "zod": "4.6.7" }
+}

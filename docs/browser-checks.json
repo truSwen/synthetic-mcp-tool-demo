@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "supported",
+    "status": "Claim: supported"
+  },
+  {
+    "scenario": "unknown",
+    "status": "Claim: unknown"
+  },
+  {
+    "scenario": "hypothesis",
+    "status": "Claim: hypothesis"
+  },
+  {
+    "scenario": "refused",
+    "status": "Refused by input schema"
+  },
+  {
+    "scenario": "list",
+    "status": "Fictional accounts returned"
+  },
+  {
+    "scenario": "brief",
+    "status": "Fictional brief returned"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "notice": "All organizations, evidence and statements are invented for this demonstration. No real research was performed.",
+  "accounts": [
+    {"id":"demo-001","name":"Fictional Cedar Studio","sector":"Design services","evidence":[{"id":"ev-001","statement":"Offers a website enquiry form.","source":"synthetic fixture"}],"claims":{"has_enquiry_form":"supported","uses_crm":"unknown","needs_automation":"hypothesis"}},
+    {"id":"demo-002","name":"Fictional Harbor Workshop","sector":"Repair services","evidence":[{"id":"ev-002","statement":"Lists appointment requests as a service.","source":"synthetic fixture"}],"claims":{"has_enquiry_form":"unknown","uses_crm":"unknown","needs_automation":"hypothesis"}}
+  ]
+}

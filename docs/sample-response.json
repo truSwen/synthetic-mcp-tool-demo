@@ -1,0 +1,66 @@
+{
+  "synthetic": true,
+  "transport": "MCP over stdio",
+  "server": {
+    "name": "synthetic-evidence-tools",
+    "version": "1.0.0"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": true
+    }
+  },
+  "tools": [
+    {
+      "name": "list_demo_accounts",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_demo_brief",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "check_demo_claim",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ],
+  "request": {
+    "name": "check_demo_claim",
+    "arguments": {
+      "account_id": "demo-001",
+      "claim": "uses_crm"
+    }
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"synthetic\":true,\"notice\":\"All organizations, evidence and statements are invented for this demonstration. No real research was performed.\",\"account_id\":\"demo-001\",\"claim\":\"uses_crm\",\"status\":\"unknown\",\"evidence_ids\":[],\"explanation\":\"The fixture contains no supporting evidence. Do not infer a fact.\"}"
+      }
+    ],
+    "structuredContent": {
+      "synthetic": true,
+      "notice": "All organizations, evidence and statements are invented for this demonstration. No real research was performed.",
+      "account_id": "demo-001",
+      "claim": "uses_crm",
+      "status": "unknown",
+      "evidence_ids": [],
+      "explanation": "The fixture contains no supporting evidence. Do not infer a fact."
+    }
+  }
+}

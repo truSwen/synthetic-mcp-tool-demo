@@ -1,0 +1,39 @@
+
+> synthetic-mcp-tool-demo@1.0.0 test
+> node --test test/*.test.js
+
+✔ real stdio initialize handshake returns server identity and tool capability (98.635833ms)
+✔ tools/list exposes exactly three read-only, closed-world tools and schemas (97.340917ms)
+✔ bounded list contains only fictional fixtures and synthetic notice (87.4025ms)
+✔ brief preserves explicit synthetic provenance (80.344709ms)
+✔ supported claim cites fixture evidence (95.63125ms)
+✔ unknown claim does not manufacture evidence (86.209208ms)
+✔ hypothesis is distinct from a supported statement (85.006792ms)
+✔ refuses unknown account across the MCP boundary (79.301125ms)
+✔ refuses path instead of account across the MCP boundary (79.396834ms)
+✔ refuses instruction instead of account across the MCP boundary (75.546625ms)
+✔ refuses unknown extra parameter across the MCP boundary (73.367542ms)
+✔ refuses missing required parameter across the MCP boundary (72.155416ms)
+✔ refuses oversized limit across the MCP boundary (75.475375ms)
+✔ refuses negative limit across the MCP boundary (77.808708ms)
+✔ refuses wrong parameter type across the MCP boundary (78.562708ms)
+✔ refuses unsupported claim across the MCP boundary (78.702959ms)
+✔ unregistered write tool is a protocol error (74.660875ms)
+✔ valid call works after refused input on the same session (79.175167ms)
+✔ scenario selector rejects inherited or arbitrary names before connecting (0.268875ms)
+✔ local UI serves clear synthetic disclosure and restrictive CSP (15.11275ms)
+✔ web bridge executes a real MCP call (110.166625ms)
+✔ web bridge exposes validation refusal (102.802125ms)
+✔ unknown scenario is rejected before MCP execution (2.628042ms)
+✔ cross-origin requests are rejected (2.141541ms)
+✔ untrusted Host header is rejected (3.975917ms)
+✔ write HTTP methods are rejected (2.487416ms)
+✔ arbitrary file routes are unavailable (2.325042ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1584.412875
