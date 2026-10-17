@@ -2,38 +2,48 @@
 > synthetic-mcp-tool-demo@1.0.0 test
 > node --test test/*.test.js
 
-✔ real stdio initialize handshake returns server identity and tool capability (98.635833ms)
-✔ tools/list exposes exactly three read-only, closed-world tools and schemas (97.340917ms)
-✔ bounded list contains only fictional fixtures and synthetic notice (87.4025ms)
-✔ brief preserves explicit synthetic provenance (80.344709ms)
-✔ supported claim cites fixture evidence (95.63125ms)
-✔ unknown claim does not manufacture evidence (86.209208ms)
-✔ hypothesis is distinct from a supported statement (85.006792ms)
-✔ refuses unknown account across the MCP boundary (79.301125ms)
-✔ refuses path instead of account across the MCP boundary (79.396834ms)
-✔ refuses instruction instead of account across the MCP boundary (75.546625ms)
-✔ refuses unknown extra parameter across the MCP boundary (73.367542ms)
-✔ refuses missing required parameter across the MCP boundary (72.155416ms)
-✔ refuses oversized limit across the MCP boundary (75.475375ms)
-✔ refuses negative limit across the MCP boundary (77.808708ms)
-✔ refuses wrong parameter type across the MCP boundary (78.562708ms)
-✔ refuses unsupported claim across the MCP boundary (78.702959ms)
-✔ unregistered write tool is a protocol error (74.660875ms)
-✔ valid call works after refused input on the same session (79.175167ms)
-✔ scenario selector rejects inherited or arbitrary names before connecting (0.268875ms)
-✔ local UI serves clear synthetic disclosure and restrictive CSP (15.11275ms)
-✔ web bridge executes a real MCP call (110.166625ms)
-✔ web bridge exposes validation refusal (102.802125ms)
-✔ unknown scenario is rejected before MCP execution (2.628042ms)
-✔ cross-origin requests are rejected (2.141541ms)
-✔ untrusted Host header is rejected (3.975917ms)
-✔ write HTTP methods are rejected (2.487416ms)
-✔ arbitrary file routes are unavailable (2.325042ms)
-ℹ tests 27
+responseMode: 'json' drops mid-call notifications. subscriptions/listen streams are always served over SSE regardless; other notifications emitted before a result are dropped.
+✔ HTTP SDK connection and tool call: list (50.072375ms)
+✔ HTTP SDK connection and tool call: brief (5.33725ms)
+✔ HTTP SDK connection and tool call: supported (3.952625ms)
+✔ HTTP SDK connection and tool call: unknown (3.171ms)
+✔ HTTP SDK connection and tool call: hypothesis (5.142417ms)
+✔ HTTP SDK connection and tool call: refused (4.374917ms)
+✔ public MCP rejects other browser origins (0.239208ms)
+✔ public MCP refuses oversized payload before SDK (0.269542ms)
+✔ public endpoint refuses GET, arbitrary hosts and unknown routes (0.562ms)
+✔ real stdio initialize handshake returns server identity and tool capability (112.412625ms)
+✔ tools/list exposes exactly three read-only, closed-world tools and schemas (91.741333ms)
+✔ bounded list contains only fictional fixtures and synthetic notice (77.118959ms)
+✔ brief preserves explicit synthetic provenance (64.757208ms)
+✔ supported claim cites fixture evidence (897.933291ms)
+✔ unknown claim does not manufacture evidence (275.905208ms)
+✔ hypothesis is distinct from a supported statement (116.041167ms)
+✔ refuses unknown account across the MCP boundary (107.670833ms)
+✔ refuses path instead of account across the MCP boundary (99.506458ms)
+✔ refuses instruction instead of account across the MCP boundary (87.4365ms)
+✔ refuses unknown extra parameter across the MCP boundary (83.985167ms)
+✔ refuses missing required parameter across the MCP boundary (86.742958ms)
+✔ refuses oversized limit across the MCP boundary (74.978959ms)
+✔ refuses negative limit across the MCP boundary (66.20075ms)
+✔ refuses wrong parameter type across the MCP boundary (67.435208ms)
+✔ refuses unsupported claim across the MCP boundary (66.057083ms)
+✔ unregistered write tool is a protocol error (68.952333ms)
+✔ valid call works after refused input on the same session (65.651083ms)
+✔ scenario selector rejects inherited or arbitrary names before connecting (0.2525ms)
+✔ local UI serves clear synthetic disclosure and restrictive CSP (14.674291ms)
+✔ web bridge executes a real MCP call (123.816ms)
+✔ web bridge exposes validation refusal (92.266583ms)
+✔ unknown scenario is rejected before MCP execution (2.104833ms)
+✔ cross-origin requests are rejected (2.027292ms)
+✔ untrusted Host header is rejected (3.234625ms)
+✔ write HTTP methods are rejected (1.753416ms)
+✔ arbitrary file routes are unavailable (1.749875ms)
+ℹ tests 36
 ℹ suites 0
-ℹ pass 27
+ℹ pass 36
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1584.412875
+ℹ duration_ms 2641.403292

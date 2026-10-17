@@ -1,0 +1,32 @@
+[
+  {
+    "scenario": "supported",
+    "status": "Claim: supported",
+    "transport": "MCP over Streamable HTTP"
+  },
+  {
+    "scenario": "unknown",
+    "status": "Claim: unknown",
+    "transport": "MCP over Streamable HTTP"
+  },
+  {
+    "scenario": "hypothesis",
+    "status": "Claim: hypothesis",
+    "transport": "MCP over Streamable HTTP"
+  },
+  {
+    "scenario": "refused",
+    "status": "Refused by input schema",
+    "transport": "MCP over Streamable HTTP"
+  },
+  {
+    "scenario": "list",
+    "status": "Fictional accounts returned",
+    "transport": "MCP over Streamable HTTP"
+  },
+  {
+    "scenario": "brief",
+    "status": "Fictional brief returned",
+    "transport": "MCP over Streamable HTTP"
+  }
+]

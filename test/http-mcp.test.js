@@ -1,0 +1,7 @@
+import{test}from'node:test';import assert from'node:assert/strict';import worker from'../pages-worker.js';import{runHttpScenario}from'../http-client.js';
+const endpoint='https://tribloc-mcp-tools.pages.dev/mcp';
+const fetcher=(url,init)=>worker.fetch(new Request(url,init),{});
+for(const key of ['list','brief','supported','unknown','hypothesis','refused'])test(`HTTP SDK connection and tool call: ${key}`,async()=>{const r=await runHttpScenario(key,endpoint,fetcher);assert.equal(r.transport,'MCP over Streamable HTTP');assert.equal(r.tools.length,3);assert.equal(r.server.name,'synthetic-evidence-tools');if(key==='refused')assert.equal(r.result.isError,true);else assert.equal(r.result.structuredContent.synthetic,true);});
+test('public MCP rejects other browser origins',async()=>{assert.equal((await fetcher(endpoint,{method:'POST',headers:{Origin:'https://example.invalid','Content-Type':'application/json'},body:'{}'})).status,403);});
+test('public MCP refuses oversized payload before SDK',async()=>{assert.equal((await fetcher(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:'x'.repeat(9000)})).status,413);});
+test('public endpoint refuses GET, arbitrary hosts and unknown routes',async()=>{assert.equal((await fetcher(endpoint)).status,405);assert.equal((await fetcher('https://example.invalid/mcp')).status,403);assert.equal((await fetcher('https://tribloc-mcp-tools.pages.dev/private')).status,404);});

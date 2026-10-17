@@ -1,5 +1,15 @@
 # MCP Evidence Tools — Synthetic Data Demo
 
+**[Try the live synthetic demo](https://tribloc-mcp-tools.pages.dev/)** — no installation or local server required.
+
+## Hosted browser version
+
+The public UI uses the official SDK client to connect to this site's real Streamable HTTP MCP endpoint at `/mcp`. The server exposes the same three read-only synthetic-fixture tools as the local stdio version. No LLM, real research, credentials or customer integration is involved. All six hosted browser scenarios passed. The combined stdio, HTTP and local-web suite now has **36 passing tests**.
+
+The HTTP handler creates a fresh server per request, uses a CSP-compatible schema validator, bounds request bodies and checks the site origin. It has no user/session data or write tools. This is an anonymous synthetic demonstration, not a production authenticated MCP service. The local stdio setup below remains available.
+
+Run `npm ci --ignore-scripts`, then `npm run build` for the Pages asset/endpoint bundle. [Hosted checks](docs/hosted-checks.json).
+
 A real Model Context Protocol client/server demonstration over **stdio**, with three read-only tools and entirely fictional data. Independently built as a public portfolio sample; it contains no private project code, customer records, credentials or internal architecture.
 
 ![Actual local demonstration: unknown claim with no evidence](docs/demo.png)
@@ -67,7 +77,7 @@ All **six UI scenarios** were also exercised in a browser. Reports: [automated t
 - No LLM inference, API keys, external CRM, outreach, writes, arbitrary URLs or arbitrary filesystem access tools.
 - No copied internal implementation, access details or proprietary topology.
 - SDK client integration tested. An interactive Claude Code or other LLM host session has **not** been tested.
-- Local runnable source demonstration, not a hosted production service. No remote authentication, tenant separation or production operations are implemented.
+- Local runnable source demonstration, not a production service. No remote authentication, tenant separation or production operations are implemented.
 - Input validation blocks the tested invalid shapes; it does not establish broad protection against all adversarial inputs.
 
 ## Implementation and attribution
