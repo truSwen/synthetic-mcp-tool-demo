@@ -10,7 +10,7 @@ The HTTP handler creates a fresh server per request, uses a CSP-compatible schem
 
 Run `npm ci --ignore-scripts`, then `npm run build` for the Pages asset/endpoint bundle. [Hosted checks](docs/hosted-checks.json).
 
-A real Model Context Protocol client/server demonstration over **stdio**, with three read-only tools and entirely fictional data. Independently built as a public portfolio sample; it contains no private project code, customer records, credentials or internal architecture.
+The local version is a real Model Context Protocol client/server demonstration over **stdio**, with the same three read-only tools and entirely fictional data. Independently built as a public portfolio sample; it contains no private project code, customer records, credentials or internal architecture.
 
 ![Actual local demonstration: unknown claim with no evidence](docs/demo.png)
 
@@ -60,7 +60,7 @@ node client.js refused
 
 ## Validation evidence
 
-On 2026-10-17, **27 automated tests passed**:
+The current suite has **36 automated tests**, all passing (re-run on 2026-11-01 with Node.js 24.19.0). It covers:
 
 - Real SDK client/server connection, server identity/capabilities and tool discovery.
 - Successful tool calls, synthetic provenance and evidence references.
@@ -68,8 +68,9 @@ On 2026-10-17, **27 automated tests passed**:
 - Schema refusals for unrecognized IDs, paths/instructions instead of IDs, extra/missing fields, invalid limit types/ranges and unsupported claims.
 - Unregistered write tool refusal and a valid call after invalid input in the same session.
 - Local HTTP bridge result, origin/Host checks, method/route restrictions and disclosure/CSP.
+- The Streamable HTTP MCP endpoint used by the hosted version.
 
-All **six UI scenarios** were also exercised in a browser. Reports: [automated tests](docs/test-report.txt), [browser checks](docs/browser-checks.json), [example real MCP response](docs/sample-response.json). The sample JSON and screenshot are recorded examples; the UI executes fresh calls. These are focused demonstration checks, not a security audit or a general prompt-injection defense claim.
+All **six UI scenarios** were also exercised in a browser, locally and on the hosted site. Reports: [automated tests](docs/test-report.txt), [browser checks](docs/browser-checks.json), [example real MCP response](docs/sample-response.json). The sample JSON and screenshot are recorded examples; the UI executes fresh calls. These are focused demonstration checks, not a security audit or a general prompt-injection defense claim.
 
 ## Boundaries
 
@@ -77,7 +78,7 @@ All **six UI scenarios** were also exercised in a browser. Reports: [automated t
 - No LLM inference, API keys, external CRM, outreach, writes, arbitrary URLs or arbitrary filesystem access tools.
 - No copied internal implementation, access details or proprietary topology.
 - SDK client integration tested. An interactive Claude Code or other LLM host session has **not** been tested.
-- Local runnable source demonstration, not a production service. No remote authentication, tenant separation or production operations are implemented.
+- Anonymous hosted demo plus runnable local source, not a production service. No authentication, tenant separation or production operations are implemented.
 - Input validation blocks the tested invalid shapes; it does not establish broad protection against all adversarial inputs.
 
 ## Implementation and attribution
